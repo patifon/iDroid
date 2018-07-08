@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Crypto Data Center</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- Custom Theme files -->
+<link href="{% static 'main_page/css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+<!-- //Custom Theme files -->
+<!-- web font -->
+<link rel="stylesheet" media="screen" href="//fontlibrary.org/face/segment7" type="text/css"/>
+<link href='//fonts.googleapis.com/css?family=Philosopher:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'><!--web font-->
+<!-- //web font -->
+      <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+	<!-- main -->
+	<div class="main">
+		<h1>Crypto Data Center скоро откроется</h1>
+		<div class="main-row">
+			<p>Первая база данных с возможностью шифрования.</p>
+			<div class="w3ls-img"> 
+				<img src="{% static "main_page/images/i1.png" %}" alt=""/>
+			</div>	
+			<div class="agileits-timer"> 
+				 <div class="clock">
+					<div class="column days">
+						<div class="timer" id="days"></div>
+						<div class="text">Дни</div>
+					</div>
+					<div class="timer days">:</div>
+					<div class="column">
+						<div class="timer" id="hours"></div>
+						<div class="text">Часы</div>
+					</div>
+					<div class="timer">:</div>
+					<div class="column">
+						<div class="timer" id="minutes"></div>
+						<div class="text">Минуты</div>
+					</div>
+					<div class="timer">:</div>
+					<div class="column">
+						<div class="timer" id="seconds"></div>
+						<div class="text">SECONDS</div>
+					</div>
+				</div>	
+			</div>
+			<div class="wthree-sub">
+                <center><p>Оставьте свой e-mail и мы уведомим Вас о открытии</p></center>
+				<form action="" method="post">{% csrf_token %}
+					<div class="form-group">
+
+                            <input name="{{ form.email.name }}" class="form-control">
+                         </div>
+                       <center><button type="submit" class="btn btn-primary btn-orange">Отправить</button></center>
+				</form>  
+			</div>	
+		</div>
+		<!-- copyright -->
+		<div class="copyright">
+			<p> © 2018 Crypto Data Center. Все права зарезервировано | Разработка by iDroid
+		</div>
+		<!-- //copyright -->
+	</div>	
+	<!-- //main -->  
+	<!--  countdown-js -->  
+	<script  src="{% static "main_page/js/jquery-1.12.3.min.js" %}"></script>
+	<script type="text/javascript" src="{% static "main_page/js/moment.js" %}"></script>
+	<script type="text/javascript" src="{% static "main_page/js/moment-timezone-with-data.js" %}"></script>
+	<script type="text/javascript" src="{% static "main_page/js/timer.js" %}"></script>
+	<!-- //countdown-js -->
+<!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
+</html>
